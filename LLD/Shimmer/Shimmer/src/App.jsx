@@ -11,34 +11,56 @@ function App() {
   const [lang, setLang] = useState("en");
   return (
     <>
-      <header className="flex text-2xl font-bold py-5  bg-gray-700 text-white text-center">
-        Hello World
-        <nav className="p-2 m-2 w-96 justify-evenly text-lg  text-white ">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/team"> Team</a>
-          <a href="/login"> Login</a>
+      <header className="flex m-auto justify-between p-5 bg-gray-700 text-white text-center">
+        <h1 className=" text-2xl font-bold">Hello World</h1>
+        <nav className=" w-96 justify-between text-lg  text-white ">
+          <a
+            className="px-3 py-3"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            className="px-3 py-3"
+            href="/about"
+          >
+            About
+          </a>
+          <a
+            className="px-3 py-3"
+            href="/team"
+          >
+            {" "}
+            Team
+          </a>
+          <a
+            className="px-3 py-3"
+            href="/login"
+          >
+            {" "}
+            Login
+          </a>
         </nav>
         <select
           value={lang}
           onChange={(e) => setLang(e.target.value)}
-          className="text-black bg-white border h-11"
+          className="text-white bg-gray-700 "
         >
           <option value="en">English</option>
           <option
-            className="text-black bg-white"
+            className="text-white bg-gray-700"
             value="hi"
           >
             Hindi
           </option>
           <option
-            className="text-black bg-white"
+            className="text-white bg-gray-700"
             value="sp"
           >
             Spanish
           </option>
           <option
-            className="text-black bg-white"
+            className="text-white bg-gray-700"
             value="ru"
           >
             Russian
