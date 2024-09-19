@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const AccordianItem = ({ title, body }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const AccordianItem = ({ title, body, isOpen, setIsOpen }) => {
+  //const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="border border-slate-300">
       <div
