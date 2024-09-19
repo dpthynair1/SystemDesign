@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { Login } from "./components/Login";
 import { useState } from "react";
+import Accordian from "./components/Accordian";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -40,6 +41,13 @@ function App() {
             {" "}
             Login
           </a>
+          <a
+            className="px-3 py-3"
+            href="/accordian"
+          >
+            {" "}
+            Accordian
+          </a>
         </nav>
         <select
           value={lang}
@@ -72,6 +80,10 @@ function App() {
           <Route
             path="/"
             element={<Body />}
+          ></Route>
+          <Route
+            path="/accordian"
+            element={<Accordian />}
           ></Route>
           <Route
             path="/about"
