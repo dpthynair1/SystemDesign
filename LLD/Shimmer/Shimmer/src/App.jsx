@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { Login } from "./components/Login";
 import { useState } from "react";
 import Accordian from "./components/Accordian";
+import MultipleOpenAccordian from "./components/MultipleOpenAccordian";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -48,6 +49,13 @@ function App() {
             {" "}
             Accordian
           </a>
+          <a
+            className="px-3 py-3"
+            href="/multipleaccordian"
+          >
+            {" "}
+            MultipleAccordian
+          </a>
         </nav>
         <select
           value={lang}
@@ -80,6 +88,10 @@ function App() {
           <Route
             path="/"
             element={<Body />}
+          ></Route>
+          <Route
+            path="/multipleaccordian"
+            element={<MultipleOpenAccordian />}
           ></Route>
           <Route
             path="/accordian"
