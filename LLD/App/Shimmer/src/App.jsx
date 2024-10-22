@@ -13,6 +13,8 @@ import ImageSlider from "./components/image-slider/ImageSlider";
 import ImageSlider2 from "./components/image-slider/imageSlider2";
 import Pagination from "./components/Pagination/Pagination";
 import PaginationFE from "./components/PaginationFE/PaginationFE";
+import ImageSliderTransition from "./components/image-slider/imageSliderWithTransition";
+import LiveChatUi from "./components/LiveChatUI/LiveChatUi";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -85,6 +87,13 @@ function App() {
           </a>
           <a
             className="px-3 py-3"
+            href="/image-slider3"
+          >
+            {" "}
+            Image-Slider-3
+          </a>
+          <a
+            className="px-3 py-3"
             href="/pagination"
           >
             {" "}
@@ -96,6 +105,13 @@ function App() {
           >
             {" "}
             PaginationFE
+          </a>
+          <a
+            className="px-3 py-3"
+            href="/livechatui"
+          >
+            {" "}
+            LiveChat
           </a>
         </nav>
         <select
@@ -151,12 +167,20 @@ function App() {
             element={<ImageSlider2 />}
           ></Route>
           <Route
+            path="/image-slider3"
+            element={<ImageSliderTransition />}
+          ></Route>
+          <Route
             path="/pagination"
             element={<Pagination />}
           ></Route>
           <Route
             path="/paginationfe"
             element={<PaginationFE />}
+          ></Route>
+          <Route
+            path="/livechatui"
+            element={<LiveChatUi />}
           ></Route>
           <Route
             path="/about"

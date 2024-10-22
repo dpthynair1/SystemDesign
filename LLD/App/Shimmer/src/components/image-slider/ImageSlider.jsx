@@ -13,7 +13,8 @@ const ImageSlider = () => {
     };
   }, []);
   const loadPrevImage = () => {
-    setActive((active) => (active - 1 < 0 ? images.length - 1 : active - 1));
+    // setActive((active) => (active - 1 < 0 ? images.length - 1 : active - 1));
+    setActive((active) => (active - 1 + images.length) % images.length);
   };
   const loadNextImage = () => {
     setActive(
