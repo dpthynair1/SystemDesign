@@ -15,6 +15,9 @@ import Pagination from "./components/Pagination/Pagination";
 import PaginationFE from "./components/PaginationFE/PaginationFE";
 import ImageSliderTransition from "./components/image-slider/imageSliderWithTransition";
 import LiveChatUi from "./components/LiveChatUI/LiveChatUi";
+import SearchUi from "./components/SearchBar/SearchUi";
+import Contact from "./components/PhoneBook/Contact";
+import Application from "./components/LetterTile/tile";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -113,6 +116,27 @@ function App() {
             {" "}
             LiveChat
           </a>
+          <a
+            className="px-3 py-3"
+            href="/searchui"
+          >
+            {" "}
+            Search
+          </a>
+           <a
+            className="px-3 py-3"
+            href="/phone-book"
+          >
+            {" "}
+            PhoneBook
+          </a>
+          <a
+            className="px-3 py-3"
+            href="/letter-tile"
+          >
+            {" "}
+            LetterTile
+          </a>
         </nav>
         <select
           value={lang}
@@ -181,6 +205,19 @@ function App() {
           <Route
             path="/livechatui"
             element={<LiveChatUi />}
+          ></Route>
+          <Route
+            path="/searchui"
+            element={<SearchUi />}
+          ></Route>
+          <Route
+            path="/phone-book"
+            element={<Contact />}
+          ></Route>
+
+           <Route
+            path="/letter-tile"
+            element={<Application />}
           ></Route>
           <Route
             path="/about"

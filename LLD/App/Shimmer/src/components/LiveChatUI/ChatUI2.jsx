@@ -4,7 +4,10 @@ import displayNameList from "../../Utils/ChatNames";
 
 const ChatUI2 = () => {
   const [messages, setMessages] = useState([]);
+  const [intervalCount, setIntervalCount] = useState(0); // Track setInterval calls
+  const [clearIntervalCount, setClearIntervalCount] = useState(0);
   const CHAT_LIMIT = 17;
+
   function generadisplayNames() {
     var findisplayName =
       displayNameList[Math.floor(Math.random() * displayNameList.length)];
@@ -69,10 +72,21 @@ const ChatUI2 = () => {
     });
   };
   useEffect(() => {
-    const s = setInterval(fetchChat, 1000);
+    console.log("useEffect is called");
+    const s = setInterval(() => {
+      fetchChat();
+      setIntervalCount((prevCount) => {
+        console.log("Set interval is called" + (prevCount + 1));
+        return prevCount + 1;
+      });
+    }, 5000);
 
     return () => {
       clearInterval(s);
+      setClearIntervalCount((prevCount) => {
+        console.log("ClearInterval is called. Count: " + (prevCount + 1));
+        return prevCount + 1;
+      });
     };
   }, []);
 
