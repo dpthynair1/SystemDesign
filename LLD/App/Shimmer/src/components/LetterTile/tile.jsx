@@ -22,6 +22,7 @@ const style = {
     outputString: {
         marginTop: "20px",
         textAlign: "center",
+        border: "1px solid #32a1ce"
     },
 }
 
